@@ -1,0 +1,41 @@
+.card{
+    background: var(--gray-800);
+    width: 15vw;
+    height: 50vh;
+    border-radius: 6px;
+    border: 1px solid var(--gray-900);
+    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1em;
+    color: var(--white);
+    cursor: pointer;
+    font-family: 'Roboto' sans-serif;
+}
+
+.card img{
+    opacity: 0.5;
+    width:15vw;
+    height: 50vh;
+    border-radius:8px ;
+    border: 1px solid var(--gray-900);
+
+}
+
+.card h1{
+    opacity: 0;
+}
+
+
+
+
+.card img:hover,
+.card:hover h1 {
+    opacity: 1;
+    transition: opacity 0.4s;
+}
+
+
+
+
