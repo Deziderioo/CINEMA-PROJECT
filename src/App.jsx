@@ -9,14 +9,19 @@ export default function App() {
 
   return (
     <>
+      
       <Header/>
-
-      <div className={style.wrapCards}>
-          <Cards/>
-          <Cards/>
-          <Cards/>
-          <Cards/>
-      </div>
+      <strong className={style.title}>Filmes em cartaz</strong>
+      
+        <div className={style.wrapCards}>
+            <Cards/>
+            <Cards/>
+            <Cards/>
+            <Cards/>
+            
+        </div>
+      
+      
     </>
   )
 }
