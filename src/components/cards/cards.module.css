@@ -1,11 +1,11 @@
 
 
-.card img{
-    opacity: 0.5;
+.card, .card img{
+    opacity: 1;
     width:12.563rem;
     height: 20.063rem;
     border-radius:8px ;
-    border-color: var(--white);
+    background: var(--gray-900);
 
 }
 
@@ -22,7 +22,7 @@
 
 
 .card img:hover{
-    opacity: 1;
+    cursor: pointer;
     transition: opacity 0.4s;
 }
 
