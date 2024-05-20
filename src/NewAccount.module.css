@@ -1,0 +1,67 @@
+
+.wrapTitle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5rem;
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  font-family: "Russo One", sans-serif;
+  color: var(--green-500);
+}
+
+.card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  background: var(--gray-800);
+  width: 19rem ;
+  height: 20rem;
+  border-radius: 8px;
+}
+
+.card input{
+  background: var(--gray-900);
+  border: none;
+  border-radius: 9px;
+  width: 16.5rem;
+  height: 45px;
+}
+
+.wrapInp, .wrapInpPass{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 1rem;
+  
+}
+
+input:focus{
+  border-color: var(--green-300);
+}
+
+input{
+  padding-left: 8px;
+}
+input{
+  color: var(--white);
+}
+
+.wrapInp input::placeholder, .wrapInpPass input::placeholder{
+  font-size: 0.9rem;
+  
+}
+
+.wrapInp label{
+  color: var(--white);
+  padding-bottom: 5px;
+  padding-right:13rem;
+}
+
+.wrapInpPass label{
+  color: var(--white);
+  padding-bottom: 5px;
+  padding-right: 11.8rem;
+}
