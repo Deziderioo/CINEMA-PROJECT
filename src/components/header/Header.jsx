@@ -1,4 +1,5 @@
 import styles from "./Header.module.css";
+import { FilmReel, User, Ticket } from "@phosphor-icons/react";
 
 import { FaRegUser } from "react-icons/fa";
 import { FaArrowCircleUp } from "react-icons/fa";
@@ -11,14 +12,18 @@ export function Header() {
         <header className={styles.header}>
           
             <div className={styles.wrapLogo}>
-             <RiMovie2Line className={styles.iconLogo} size={60}/>
+            <FilmReel  className={styles.iconLogo} size={60} color="#00875f" weight="light" />
+            
             </div>
             <div className={styles.wrapA}>
-              <a href=""> <GoHomeFill size={20}/> Home</a>
-              
-              <a href=""> Top filmes</a>
+              <a href="">Home</a>
+              <a href="">contact</a>              
+              <a href="">top films</a>
             </div>
-             <FaRegUser className={styles.icon}size={23}/>
+            <div className={styles.icon}>
+              <Ticket size={32} color="#00875f" weight="light" />
+              <User size={32} color="#00875f" weight="light" />
+            </div>
         </header>
     </div>
         

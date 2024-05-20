@@ -11,7 +11,9 @@ export default function App() {
     <>
       
       <Header/>
-      <strong className={style.title}>Filmes em cartaz</strong>
+     
+        <strong className={style.title}>movies in theaters</strong>
+      
       
         <div className={style.wrapCards}>
             <Cards/>

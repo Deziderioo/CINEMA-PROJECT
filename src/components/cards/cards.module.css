@@ -1,38 +1,27 @@
-.card{
-    background: var(--gray-800);
-    width: 15vw;
-    height: 50vh;
-    border-radius: 6px;
-    border: none;
-    border-color: var(--white);
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 1em;
-    color: var(--white);
-    cursor: pointer;
-    font-family: 'Roboto' sans-serif;
-}
+
 
 .card img{
     opacity: 0.5;
-    width:15vw;
-    height: 50vh;
+    width:12.563rem;
+    height: 20.063rem;
     border-radius:8px ;
     border-color: var(--white);
 
 }
 
-.card h1{
-    font-size: 1.5rem;
-    opacity: 0;
+.movieTitle{
+    display: flex;
+    justify-content: center;
+    padding-top: 0.50rem;
+    align-items: center;
+    font-size: 0.65rem;
+    
 }
 
 
 
 
-.card img:hover,
-.card:hover h1 {
+.card img:hover{
     opacity: 1;
     transition: opacity 0.4s;
 }

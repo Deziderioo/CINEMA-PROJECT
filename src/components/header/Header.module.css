@@ -24,7 +24,7 @@
 .wrapA a{
   display: flex;
   align-items: center;
-  color: var(--green-500);
+  color: var(--white);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -39,15 +39,15 @@
 }
 
 .icon{
-  color: var(--green-500);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+  gap: 0.75rem;
 
-  transition: color 0.2s;
+  
 }
 
-.icon:hover{
-  color: var(--green-300);
-}
 
 .wrapLogo{
   display: flex;
