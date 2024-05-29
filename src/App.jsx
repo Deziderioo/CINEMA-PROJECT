@@ -11,10 +11,10 @@ export default function App() {
   
   return (
     <>
+      {modal !== undefined && <MovieInfo data={cards[modal]} close={() => setModal()}/>}
       
       <Header/>
      
-      {modal !== undefined && <MovieInfo data={cards[modal]} close={() => setModal()}/>}
         <strong className={style.title}>movies in theaters</strong>
       
 
@@ -22,7 +22,7 @@ export default function App() {
           {cards.map((item, index) =>{
             return(
               <div key={index}>
-                <Cards title={item.title} image={item.image} />
+                <Cards title={item.title} image={item.image}/>
                 <button onClick={() => setModal(index)}>BUTTON</button>
               </div>
             )

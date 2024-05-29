@@ -1,7 +1,12 @@
 [
     {
       "title": "Andre",
-      "image": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/81c2c457691753.5a059d944bf23.jpg"
+      "image": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/81c2c457691753.5a059d944bf23.jpg",
+      "moreInfo": { 
+        "sinopse": "SHUERNOWS",
+        "autor": "Edson",
+        "elenco": "Maicon douglas"
+      }
       
     },
     {

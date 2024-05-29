@@ -1,0 +1,12 @@
+.wrap{
+    background: var(--gray-700);
+    border-radius: 8px;
+    align-items: center;
+    width:20rem;
+    height: 30rem;
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
