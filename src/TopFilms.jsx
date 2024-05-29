@@ -11,16 +11,7 @@ export default function TopFilms(){
                <strong>Top Movies</strong>
             </div>
             <div className={style.wrapCards}>
-                <Cards/>
-                <Cards/>
-                <Cards/>
-                <Cards/>
-                <Cards/>
-                <Cards/>
-                <Cards/>
-                <Cards/>
-                <Cards/>
-                <Cards/>
+                
             </div>
         </>
         )

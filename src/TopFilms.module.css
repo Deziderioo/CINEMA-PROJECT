@@ -5,7 +5,6 @@ body{
 .wrapCards{
     display: flex;
     align-items: center;
-    
     justify-content: center;
     gap: 4rem;
     flex-wrap: wrap;
