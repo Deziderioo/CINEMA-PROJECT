@@ -1,7 +1,18 @@
-export default function topFilms(){
+import style from "./TopFilms.module.css"
+import Cards from "./components/cards/cards";
+
+import { Header } from "./components/header/Header";
+
+export default function TopFilms(){
     return(
         <>
-        <h1>ola</h1>
+            <Header/>
+            <div className={style.wrapTitle}> 
+               <strong>Top Movies</strong>
+            </div>
+            <div className={style.wrapCards}>
+                
+            </div>
         </>
         )
 }

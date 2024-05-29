@@ -12,7 +12,7 @@ export default function App() {
 
   return (
     <>
-      {modal !== undefined && <ModalInfo data={moreInfo[modal]} close={() => setModal()}/>}
+      {modal !== undefined && <ModalInfo data={caracters[modal]} close={() => setModal()}/>}
       
       <Header/>
      

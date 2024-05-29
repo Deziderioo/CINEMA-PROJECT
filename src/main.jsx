@@ -9,6 +9,7 @@ import App from './App.jsx'
 import { NewAccount } from './NewAccount.jsx';
 
 import './globalStyle.css'
+import TopFilms from './TopFilms.jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,11 @@ const router = createBrowserRouter([
   {
     path: "/newaccount",
     element: <NewAccount/>,
-  },  
+  },
+  {
+    path: "/topfilms",
+    element: <TopFilms/>,
+  },    
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
