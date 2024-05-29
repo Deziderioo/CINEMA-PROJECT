@@ -14,7 +14,7 @@ export function Header() {
             <div className={styles.wrapA}>
               <a href="/home">Home</a>
               <a href="">contact</a>              
-              <a href="">top films</a>
+              <a href="/topfilms">top films</a>
             </div>
             <div className={styles.icon}>
               <button><a href=""><Ticket size={25}  weight="light"/></a></button>

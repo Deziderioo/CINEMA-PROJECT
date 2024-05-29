@@ -1,7 +1,7 @@
-export default function topFilms(){
+export default function TopFilms(){
     return(
         <>
-        <h1>ola</h1>
+
         </>
         )
 }
