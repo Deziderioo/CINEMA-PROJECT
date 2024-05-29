@@ -1,4 +1,4 @@
-import Cards from "./components/cards/cards";
+import Cards from "./components/cards";
 import { Header } from "./components/header/Header";
 import { useEffect, useState } from 'react';
 import cards from "./constants/cards.json"
@@ -36,4 +36,3 @@ export default function App() {
     </>
   )
 }
-
