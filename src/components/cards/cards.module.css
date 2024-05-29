@@ -7,6 +7,7 @@
     border-radius:8px ;
     background: var(--gray-900);
 
+    transition: all 0.2s;
 }
 
 .movieTitle{
@@ -16,15 +17,16 @@
     align-items: center;
     font-size: 0.65rem;
     color: var(--white);
-    
+   
 }
 
 
 
 
 .card img:hover{
+    transform: scale(1.05);
     cursor: pointer;
-    transition: opacity 0.4s;
+    
 }
 
 
