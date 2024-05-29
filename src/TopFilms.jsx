@@ -1,5 +1,5 @@
 import style from "./TopFilms.module.css"
-import Cards from "./components/cards/cards";
+
 
 import { Header } from "./components/header/Header";
 
