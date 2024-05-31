@@ -7,7 +7,7 @@ import style from "./app.module.css";
 
 export default function App() {
   const [popularMovies, setPopularMovies] = useState([]);
-  const [selectedMovie, setSelectedMovie] = useState(null);
+  
   const [modal, setModal] = useState();
 
   useEffect(() => {
