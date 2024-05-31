@@ -6,11 +6,10 @@ export default function MovieInfo(props){
         <Draggable>
            <div className={style.wrap}>
             <strong>{props.title}</strong>
-            <img src={props.image} alt=""/>
+            <img src={props.image} alt="" onClick={props.onImageClick}/>
             <p>{props.sinopse}</p>
             <p>{props.autor}</p>
             <p>{props.elenco}</p>
-
             <button><a href="">Reservar assento</a></button>
            </div>
         </Draggable>

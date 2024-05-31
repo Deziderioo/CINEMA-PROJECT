@@ -23,7 +23,9 @@
 }
 
 .wrap img{
-    
-    
     max-width: 8rem;
+}
+
+.wrap p {
+    color: var(--white);
 }
