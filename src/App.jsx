@@ -11,7 +11,15 @@ export default function App() {
   
   return (
     <>
-      {modal !== undefined && <MovieInfo data={cards[modal]} close={() => setModal()}/>}
+      {modal !== undefined && <MovieInfo data={cards[modal]} close={() => setModal()} 
+      title={cards[modal].title} 
+      image={cards[modal].image}
+      sinopse={cards[modal].moreInfo.sinopse}
+      autor={cards[modal].moreInfo.autor}
+      elenco={cards[modal].moreInfo.elenco}
+
+      
+      />}
       
       <Header/>
      

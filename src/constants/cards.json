@@ -1,17 +1,22 @@
 [
     {
-      "title": "Andre",
+      "title": "Titulo",
       "image": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/81c2c457691753.5a059d944bf23.jpg",
       "moreInfo": { 
-        "sinopse": "SHUERNOWS",
-        "autor": "Edson",
-        "elenco": "Maicon douglas"
+        "sinopse": "Sinopse",
+        "autor": "Autor",
+        "elenco": "Elenco"
       }
       
     },
     {
       "title": "Colar", 
-      "image": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/81c2c457691753.5a059d944bf23.jpg"
+      "image": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/81c2c457691753.5a059d944bf23.jpg",
+      "moreInfo": { 
+        "sinopse": "lorem",
+        "autor": "Andre dias",
+        "elenco": "Barcelos"
+      }
     },
     {
       "title": "Sei la", 

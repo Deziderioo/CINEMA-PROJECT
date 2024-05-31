@@ -10,6 +10,8 @@ export default function MovieInfo(props){
             <p>{props.sinopse}</p>
             <p>{props.autor}</p>
             <p>{props.elenco}</p>
+
+            <button><a href="">Reservar assento</a></button>
            </div>
         </Draggable>
     )
