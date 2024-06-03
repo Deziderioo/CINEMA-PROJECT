@@ -36,9 +36,7 @@
 
 
 
-.iconLogo{
-  color: var(--green-500);
-}
+
 
 .icon{
   display: flex;
@@ -66,6 +64,8 @@
 }
 
 .icon a:hover{
+  background: none;
+  border: none;
   cursor: pointer;
   color: var(--green-300);
 }

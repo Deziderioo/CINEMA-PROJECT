@@ -11,6 +11,7 @@ import { NewAccount } from './NewAccount.jsx';
 import './globalStyle.css'
 import TopFilms from './TopFilms.jsx';
 import { Contact } from './Contato.jsx';
+import MovieBooking from './MovieBooking.jsx';
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <Contact/>,
+  },
+  {
+    path: "/movieBooking",
+    element: <MovieBooking/>,
   },    
 ]);
 

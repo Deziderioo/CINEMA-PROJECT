@@ -12,7 +12,7 @@ export default function MovieInfo(props){
             <p>{props.autor}</p>
             <p>{props.elenco}</p>
             
-             <button><Ticket size={19}  weight="light"/><a href="">Reservar assento</a></button>
+             <button><Ticket size={19}  weight="light"/><a href="/moviebooking">Reservar assento</a></button>
             </div>
         </Draggable>
     )

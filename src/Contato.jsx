@@ -6,6 +6,11 @@ import { Header } from "./components/header/Header"
 import style from "./Contato.module.css"
 import { MapContainer, TileLayer, Marker, Popup} from 'react-leaflet'
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 56dc4aeb7303e2176e7c407c64d3a35533db8970
 
 export const Contact = () => {
 

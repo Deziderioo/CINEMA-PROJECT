@@ -1,9 +1,10 @@
 import style from "./MovieBooking.module.css"
+import { Header } from "./components/header/Header"
 
-export default Seat = ({seat, onReserve}) =>{
+export default function MovieBooking(){
   return(
-    <div>
-      
-    </div>
+    <>
+    <Header/>
+    </>
   )
 }
