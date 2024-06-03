@@ -37,6 +37,7 @@ export default function App() {
         />
       )}
       
+      
       <Header/>
       <strong className={style.title}>Movies in Theaters</strong>
       <div className={style.wrapCards}>

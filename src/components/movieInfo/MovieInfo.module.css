@@ -16,6 +16,7 @@
     padding: 1rem;
     box-sizing: border-box;
     text-align: center;
+  
 
 }
 
@@ -43,7 +44,7 @@
     transition: color 0.5s;
     border: none !important;
     background: none !important;
-
+    
 }
 .wrap button {
     display: flex;
@@ -68,4 +69,12 @@
     background: var(--green-300);
     color: var(--white);
     border: 1px solid var(--green-300);
+}
+
+.sinopse{
+    overflow-y: auto;
+}
+
+.sinopse::-webkit-scrollbar {
+    width: 0.1px; /* Largura da scrollbar */
 }
