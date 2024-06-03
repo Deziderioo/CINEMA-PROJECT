@@ -10,6 +10,7 @@ import { NewAccount } from './NewAccount.jsx';
 
 import './globalStyle.css'
 import TopFilms from './TopFilms.jsx';
+import { Contact } from './Contato.jsx';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/topfilms",
     element: <TopFilms/>,
+  },
+  {
+    path: "/contact",
+    element: <Contact/>,
   },    
 ]);
 
