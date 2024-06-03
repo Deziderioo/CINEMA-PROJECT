@@ -7,6 +7,7 @@ import {
 
 import App from './App.jsx'
 import { NewAccount } from './NewAccount.jsx';
+import { Login } from './Login.jsx'
 
 import './globalStyle.css'
 import TopFilms from './TopFilms.jsx';
@@ -37,7 +38,11 @@ const router = createBrowserRouter([
   {
     path: "/movieBooking",
     element: <MovieBooking/>,
-  },    
+  },  
+  {
+    path: "/login",
+    element: <Login/>,
+  },  
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

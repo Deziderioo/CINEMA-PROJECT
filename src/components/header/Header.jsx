@@ -18,7 +18,7 @@ export function Header() {
             </div>
             <div className={styles.icon}>
               <button><a href=""><Ticket size={25}  weight="light"/></a></button>
-              <button><a href="/newaccount"><User size={25}  weight="light" /></a></button>
+              <button><a href="/login"><User size={25}  weight="light" /></a></button>
             </div>
         </header>
     </div>
