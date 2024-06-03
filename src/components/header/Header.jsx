@@ -13,7 +13,7 @@ export function Header() {
             </div>
             <div className={styles.wrapA}>
               <a href="/home">Home</a>
-              <a href="">contact</a>              
+              <a href="/contact">contact</a>              
               <a href="/topfilms">top</a>
             </div>
             <div className={styles.icon}>
