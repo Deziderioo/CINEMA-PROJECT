@@ -3,8 +3,19 @@
     width: 100%;
     height: auto;
 }
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 3.75rem;
+    font-family: "Russo One", sans-serif;
+    color: var(--green-500);
+}
 
 .wrapH1{
+    color: var(--green-500);
     text-align: center;
 }
 
@@ -19,14 +30,16 @@
 }
 
 .wrapMap{
-    width: 300px;
-    height: 200px;
+    width: 600px;
+    height: 600px;
+   
 }
 
 .inputsDiv{
     width:100%;
     padding: 2.2em;
     height: auto;
+    color: var(--green-500);    
     border: 2px solid var(--bg-third);
     box-shadow: var(--color-shadow);
     border-radius: 10px;
@@ -72,14 +85,14 @@
     border: none;
     padding: 10px 30px;
     border-radius: 999px;
-    background-color: var(--bg-primary);
+    background-color: var(--green-500);
     border: 1px solid var(--text-title);
-    color: var( --text-title);
+    color: var(--gray-600);
     transition: all 200ms ease-out;
 }
 
 .btnTec:hover{
-    border: 1px solid var(--text-p);
+    border: 1px solid var(--green-500);
     color: var(--text-p);
     box-shadow: var(--color-shadow);
     transition: all 200ms ease-in;

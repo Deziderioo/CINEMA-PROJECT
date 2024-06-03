@@ -9,7 +9,9 @@ body{
     gap: 3rem;
     flex-wrap: wrap;
 }
-
+h2{
+    color: var(--green-500);
+}
 .backCards{
     background-color: white;
 }

@@ -6,10 +6,6 @@ import { Header } from "./components/header/Header"
 import style from "./Contato.module.css"
 import { MapContainer, TileLayer, Marker, Popup} from 'react-leaflet'
 
-import 'leaflet/dist/leaflet.css';
-import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
-import 'leaflet-defaulticon-compatibility';
-
 
 export const Contact = () => {
 
@@ -49,7 +45,7 @@ export const Contact = () => {
             <div className={style.wrapTwoDivs}>
             <div className={style.wrapMap}>
                     <h2>Map</h2>
-                    <MapContainer center={[geoData.lat, geoData.lng]} zoom={13} scrollWheelZoom={false} style={{width: "100%", height: "100%"}}>
+                    <MapContainer center={[geoData.lat, geoData.lng]} zoom={14} scrollWheelZoom={false} style={{width: "100%", height: "100% ",  border: "50px"}}>
                         <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
