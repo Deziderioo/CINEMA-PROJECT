@@ -6,15 +6,23 @@ export function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const account = JSON.parse(localStorage.getItem('account'));
+    const response = await fetch('http://localhost:3001/api/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, password }),
+    });
 
-    if (account && account.email === email && account.password === password) {
-      alert('Login bem-sucedido!');
+    const data = await response.json();
+
+    if (response.ok) {
+      alert(data.message);
     } else {
-      alert('Email ou senha incorretos!');
+      alert(data.message);
     }
   };
 
@@ -45,8 +53,7 @@ export function Login() {
           />
         </div>
         <button type="submit">Login</button>
-        <button href="/NewAccount">Create</button>
-        <a href="/NewAccount">seila</a>  
+        <a href='/newaccount'>Create</a>
       </form>
     </div>
   );

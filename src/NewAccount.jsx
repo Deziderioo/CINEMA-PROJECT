@@ -7,14 +7,24 @@ export function NewAccount() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const account = { name, email, password };
+    const response = await fetch('http://localhost:3001/api/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name, email, password }),
+    });
 
-    localStorage.setItem('account', JSON.stringify(account));
+    const data = await response.json();
 
-    alert('Conta criada com sucesso!');
+    if (response.ok) {
+      alert('Conta criada com sucesso!');
+    } else {
+      alert(data.error);
+    }
   };
 
   return (
