@@ -1,0 +1,26 @@
+/* assento.module.css */
+.assento {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: var(--gray-700);
+   
+    margin: 5px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px; 
+  }
+  
+  .assento:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .assento.reservado {
+    background-color: var(--green-300);
+    color: #fff;
+  }
+  
+  

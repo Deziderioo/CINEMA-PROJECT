@@ -61,7 +61,7 @@
     padding-right: 11.8rem;
   }
   
-  button {
+ /* button {
     padding: 10px 20px;
     background-color: var(--green-500);
     color: white;
@@ -73,7 +73,7 @@
   
   button:hover {
     background-color: var(--green-700);
-  }
+  } */
   
   .redirectButton {
     background: none;

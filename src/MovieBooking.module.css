@@ -1,0 +1,12 @@
+/* reservaAssentos.module.css */
+.reservaAssentos {
+    text-align: center;
+  }
+  
+  .assentosContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
