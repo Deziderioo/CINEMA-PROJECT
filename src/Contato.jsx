@@ -72,7 +72,7 @@ export const Contact = () => {
                         </div>
                         <div className={style.wrapLabelInput}>
                             <label htmlFor="message" className={style.labels}>Mensagem:</label>
-                            <textarea className={style.textareaS1} id='message' name='message' value={formData.message} onChange={handleChange} required></textarea>
+                            <textarea className={style.txtArea} id='message' name='message' value={formData.message} onChange={handleChange} required></textarea>
                         </div>
                         <button className={style.btnTec} onClick={handleWhatsAppMessage}>Enviar mensagem</button>
                     </div>
