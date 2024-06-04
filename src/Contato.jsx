@@ -12,7 +12,7 @@ export const Contact = () => {
 
  
 
-    const geoData = ({lat:-25.4188456, lng: -49.3402957})
+    const geoData = ({lat:-25.4249865, lng: -49.2724705})
 
     const defaultPhoneNumber = '5541998539758'
 
@@ -46,7 +46,7 @@ export const Contact = () => {
             <div className={style.wrapTwoDivs}>
             <div className={style.wrapMap}>
                     <h2>Map</h2>
-                    <MapContainer center={[geoData.lat, geoData.lng]} zoom={14} scrollWheelZoom={false} style={{width: "100%", height: "100% ",  border: "50px"}}>
+                    <MapContainer center={[geoData.lat, geoData.lng]} zoom={16} scrollWheelZoom={false} style={{width: "100%", height: "100% ",  border: "50px"}}>
                         <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
