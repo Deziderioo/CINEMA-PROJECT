@@ -3,8 +3,9 @@ import Assento from './components/assento';
 import style from './MovieBooking.module.css'
 import { Header } from './components/header/Header';
 
+
 const ReservaAssentos = () => {
-  // Array de objetos representando cada assento
+  
   const gerarAssentos = (quantidade) => {
     const novosAssentos = [];
     for (let i = 1; i <= quantidade; i++) {
@@ -13,13 +14,13 @@ const ReservaAssentos = () => {
     return novosAssentos;
   };
 
-  const numeroTotalAssentos = 100;
+  const numeroTotalAssentos = 147;
 
   const [assentos, setAssentos] = useState(gerarAssentos(numeroTotalAssentos));
 
-  // Função para lidar com o clique em um assento
+ 
   const handleAssentoClicado = (numeroAssento) => {
-    // Lógica para reservar ou liberar o assento
+
     const novosAssentos = assentos.map((assento) =>
       assento.numero === numeroAssento
         ? { ...assento, reservado: !assento.reservado }
@@ -30,9 +31,10 @@ const ReservaAssentos = () => {
 
   return (
     <>
-   
+
     <Header/>
-   
+
+      <strong className={style.title}>reserve seu assento</strong>
       <div className={style.assentosContainer}>
         {assentos.map((assento) => (
           <Assento

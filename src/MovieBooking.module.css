@@ -2,11 +2,24 @@
 .reservaAssentos {
     text-align: center;
   }
-  
-  .assentosContainer {
-    margin-top: 20px;
+
+.assentosContainer {
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  }
+    transform: scale(0.9);
+    padding: 1px;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    margin-bottom: 10px;
+    font-size: 3.75rem;
+    font-family: "Russo One", sans-serif;
+    color: var(--green-500);
+}
   
