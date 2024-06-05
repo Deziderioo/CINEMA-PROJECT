@@ -1,29 +1,39 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import style from "./Login.module.css";
 import { Header } from "./components/header/Header";
 
 export function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    const response = await fetch('http://localhost:3001/api/login', {
+    fetch('http://localhost:3001/api/login', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ email, password })
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.message) {
+        alert(data.message);
+      } else {
+        alert(data.error);
+      }
+    })
+    .catch(error => {
+      console.error('Erro:', error);
+      alert('Erro ao fazer login.');
     });
+  };
 
-    const data = await response.json();
-
-    if (response.ok) {
-      alert(data.message);
-    } else {
-      alert(data.message);
-    }
+  const handleCreateAccount = () => {
+    navigate('/newaccount');
   };
 
   return (
@@ -52,8 +62,10 @@ export function Login() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button type="submit">Login</button>
-        <a href='/newaccount'>Create</a>
+        <div className='buttonlogin'>
+          <button type="submit">Login</button>
+          <button type="button" onClick={handleCreateAccount}>Create Account</button>
+        </div>
       </form>
     </div>
   );

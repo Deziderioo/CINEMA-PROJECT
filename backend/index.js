@@ -31,6 +31,22 @@ app.post('/api/register', (req, res) => {
   });
 });
 
+// Rota para fazer login
+app.post('/api/login', (req, res) => {
+  const { email, password } = req.body;
+  db.get('SELECT * FROM users WHERE email = ? AND password = ?', [email, password], (err, row) => {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+    if (row) {
+      res.status(200).json({ message: 'Login bem-sucedido!', user: row });
+    } else {
+      res.status(400).json({ error: 'Email ou senha incorretos!' });
+    }
+  });
+});
+
+
 // Rotas para outras operações do banco de dados...
 
 app.listen(port, () => {
