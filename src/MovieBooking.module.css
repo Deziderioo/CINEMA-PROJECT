@@ -22,4 +22,31 @@
     font-family: "Russo One", sans-serif;
     color: var(--green-500);
 }
-  
+
+.wrapButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapButton button {
+
+        margin-top: 5px;
+        width: 9rem;
+        height: 2.5rem;
+        border-radius: 8px;
+        background: none;
+        border: solid 1px  var(--green-500);
+        color: var(--green-500);
+        text-decoration: none;
+        gap: 4px;
+        transition: all 1s;
+    }
+
+.wrapButton button:hover{
+    cursor: pointer;
+    color: var(--white);
+    background: var(--green-300);
+    border: solid 1px  var(--green-300);
+}
+    
