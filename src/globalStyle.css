@@ -21,7 +21,7 @@
 body { 
   background: var(--gray-900);
   
-
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -35,3 +35,6 @@ body, input, textarea, button {
 a{
   text-decoration: none;
 }
+
+
+

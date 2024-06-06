@@ -14,7 +14,7 @@ export default function App() {
     const fetchPopularMovies = async () => {
       try {
         const movies = await getPopularMovies();
-        setPopularMovies(movies.slice(0, 5));
+        setPopularMovies(movies.slice(0, 5 ));
       } catch (error) {
         console.error('Error fetching popular movies:', error);
       }
@@ -27,6 +27,7 @@ export default function App() {
 
   return (
     <>
+    <div className={style.body}>
       {modal !== undefined && (
         <MovieInfo 
           title={popularMovies[modal].title} 
@@ -47,6 +48,7 @@ export default function App() {
           </div>
         ))}
       </div>
+    </div>
     </>
   )
 }

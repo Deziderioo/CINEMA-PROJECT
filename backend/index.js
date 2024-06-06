@@ -48,14 +48,14 @@ app.post('/api/login', (req, res) => {
   });
 });
 
-// Rota para reservar um assento
+
 app.post('/api/moviebooking/:numeroAssento', (req, res) => {
   const { numeroAssento } = req.params;
 
-  // SQL para atualizar o status do assento para reservado no banco de dados
+  
   const sql = `UPDATE assentos SET reservado = 1 WHERE numero = ?`;
 
-  // Executar a consulta SQL
+
   db.run(sql, [numeroAssento], (err) => {
     if (err) {
       return res.status(500).json({ error: err.message });

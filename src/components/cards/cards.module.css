@@ -1,5 +1,7 @@
 
-
+.card{
+    margin-bottom: 20px;
+}
 .card, .card img{
     opacity: 1;
     width:12.563rem;

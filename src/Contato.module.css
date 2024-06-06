@@ -2,6 +2,7 @@
 
     width: 100%;
     height: auto;
+    
 }
 .title{
     display: flex;
@@ -32,7 +33,7 @@
 .wrapMap{
     width: 500px;
     height: 500px;
-   
+    padding-bottom: 2rem;
 }
 
 .inputsDiv{
