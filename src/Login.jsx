@@ -62,7 +62,7 @@ export function Login() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <div className='buttonlogin'>
+        <div className={style.buttonlogin}>
           <button type="submit">Login</button>
           <button type="button" onClick={handleCreateAccount}>Create Account</button>
         </div>

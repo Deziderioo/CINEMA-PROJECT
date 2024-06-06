@@ -62,7 +62,9 @@ export function NewAccount() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button type="submit">Create Account</button>
+        <div className={style.buttonclogin}>
+          <button type="submit">Create Account</button>
+        </div>
       </form>
     </div>
   );
