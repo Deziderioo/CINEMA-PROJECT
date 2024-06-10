@@ -16,9 +16,7 @@ const db = new sqlite3.Database(dbPath, (err) => {
   } else {
     console.log('Conexão bem-sucedida com o banco de dados SQLite.');
     // Cria a tabela se ela não existir
-    db.run("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, email TEXT UNIQUE, password TEXT)");
-    // Cria a tabela de assentos se ela não existir
-    db.run("CREATE TABLE IF NOT EXISTS assentos (id INTEGER PRIMARY KEY AUTOINCREMENT, numero TEXT, reservado BOOLEAN)");
+    db.run("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, email TEXT UNIQUE, password TEXT)");  
   }
 });
 
@@ -47,25 +45,6 @@ app.post('/api/login', (req, res) => {
     }
   });
 });
-
-
-app.post('/api/moviebooking/:numeroAssento', (req, res) => {
-  const { numeroAssento } = req.params;
-
-  
-  const sql = `UPDATE assentos SET reservado = 1 WHERE numero = ?`;
-
-
-  db.run(sql, [numeroAssento], (err) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.status(200).json({ message: `Assento ${numeroAssento} reservado com sucesso!` });
-  });
-});
-
-
-
 
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);

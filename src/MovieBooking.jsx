@@ -5,7 +5,8 @@ import Axios from 'axios';
 import { Header } from './components/header/Header';
 
 const ReservaAssentos = () => {
-  
+  const [assentos, setAssentos] = useState([]);
+
   const gerarAssentos = (quantidade) => {
     const novosAssentos = [];
     for (let i = 1; i <= quantidade; i++) {
@@ -16,16 +17,9 @@ const ReservaAssentos = () => {
 
   const numeroTotalAssentos = 216;
 
-  const [assentos, setAssentos] = useState(gerarAssentos(numeroTotalAssentos));
-
-  const reservarAssento = async (numeroAssento) => {
-    try {
-      await Axios.post(`http://localhost:3001/api/moviebooking/${numeroAssento}`);
-      console.log(`Assento ${numeroAssento} reservado com sucesso!`);
-    } catch (error) {
-      console.error('Erro ao reservar o assento:', error);
-    }
-  };
+  useState(() => {
+    setAssentos(gerarAssentos(numeroTotalAssentos));
+  }, []);
 
   const handleAssentoClicado = (numeroAssento) => {
     const novosAssentos = assentos.map((assento) =>
@@ -36,34 +30,23 @@ const ReservaAssentos = () => {
     setAssentos(novosAssentos);
   };
 
- 
-  const handleReservarAssento = async (numeroAssento) => {
-    try {
-      await Axios.post(`http://localhost:3001/api/moviebooking/${numeroAssento}`);
-      console.log(`Assento ${numeroAssento} reservado com sucesso!`);
-    } catch (error) {
-      console.error('Erro ao reservar o assento:', error);
-    }
-  };
-  
-
   return (
     <>
       <Header />
       <strong className={style.title}>Reserve seu assento</strong>
       <div className={style.wrapAll}>
         <div className={style.assentosContainer}>
-          {assentos.map((assento) => (
+          {assentos.map(assento => (
             <Assento
               key={assento.numero}
               numero={assento.numero}
               reservado={assento.reservado}
-              onAssentoClicado={handleAssentoClicado}
+              onAssentoClicado={() => handleAssentoClicado(assento.numero)}
             />
           ))}
         </div>
         <div className={style.wrapButton}>
-          <button onClick={handleReservarAssento}>Reserve</button>
+          <button onClick={() =>("")}>Reserve</button>
         </div>
       </div>
     </>
