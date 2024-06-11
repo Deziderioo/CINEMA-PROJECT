@@ -27,9 +27,9 @@ export default function App() {
       <div className={style.body}>
         {modal !== undefined && (
           <MovieInfo 
-            title={popularMovies[modal].title} 
-            image={popularMovies[modal].poster_url}
-            sinopse={popularMovies[modal].overview}
+            title={popularMovies[modal]?.title} 
+            image={popularMovies[modal]?.poster_url}
+            sinopse={popularMovies[modal]?.overview}
             onClose={() => setModal(undefined)}
             onImageClick={() => console.log("Imagem Clicada")}
           />

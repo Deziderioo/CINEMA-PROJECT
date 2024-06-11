@@ -37,8 +37,17 @@
     color: var(--white);
 }
 
+.wrap a{
+    scale: 0.9;
+    color: var(--green-500);
+    transition: all 0.5s;
+}
 
-.wrap button a{
+.wrap a:hover{
+    color: var(--green-300);
+}
+
+.button a{
     font-size: 0.8rem;
     color: var(--green-500);
     transition: color 0.5s;
@@ -46,7 +55,7 @@
     background: none !important;
     
 }
-.wrap button {
+.button{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,7 +74,7 @@
 
 
 
-.wrap button:hover, button:hover a {
+.button:hover, .button:hover a {
     background: var(--green-300);
     color: var(--white);
     border: 1px solid var(--green-300);
@@ -81,10 +90,23 @@
 
 
 .closeButton {
-    position: absolute;
-    top: 10px;
-    right: 10px;
     background: none;
     border: none;
     cursor: pointer;
+    color: var(--green-500);
+    transition: all 0.3s;
 }
+
+.closeButton:hover{
+    color: var(--green-300);
+}
+
+.wrapCloseButton{
+    width: 10px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 16rem !important;
+}
+
+
