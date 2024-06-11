@@ -16,6 +16,9 @@ const db = new sqlite3.Database(dbPath, (err) => {
   } else {
     console.log('Conexão bem-sucedida com o banco de dados SQLite.');
     // Cria a tabela se ela não existir
+    
+    db.run("CREATE TABLE IF NOT EXISTS assentos (id INTEGER PRIMARY KEY AUTOINCREMENT, numeroAssento TEXT, reservado BOOLEAN, dataReserva DATE)");  
+    
     db.run("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, email TEXT UNIQUE, password TEXT)");  
   }
 });
@@ -45,6 +48,43 @@ app.post('/api/login', (req, res) => {
     }
   });
 });
+
+app.post('/api/toreserve', async (req, res) => {
+  const { numerosAssentos } = req.body; 
+
+  if (!numerosAssentos) {
+    return res.status(400).json({ error: 'Nenhum assento selecionado para reserva' });
+  }
+
+  const dataReserva = new Date().toISOString(); 
+  const reservas = [];
+
+  try {
+    // Usando Promise.all para garantir que todas as inserções sejam concluídas antes de enviar a resposta
+    await Promise.all(numerosAssentos.map(async (numeroAssento) => {
+      await new Promise((resolve, reject) => {
+        db.run("INSERT INTO assentos (numeroAssento, reservado, dataReserva) VALUES (?, ?, ?)", [numeroAssento, true, dataReserva], (err, row) => {
+          if (err) {
+            reservas.push(`Erro ao reservar assento ${numeroAssento}: ${err.message}`);
+            reject(err);
+          } else {
+            reservas.push(`Assento ${numeroAssento} reservado com sucesso`);
+            resolve();
+          }
+        });
+      });
+    }));
+
+    // Se todas as reservas foram bem-sucedidas, envie a resposta com as mensagens de reserva
+    res.status(200).json({ messages: reservas });
+  } catch (error) {
+    // Se ocorrer algum erro durante o processo de reserva, envie uma resposta de erro
+    res.status(500).json({ error: 'Erro ao processar a reserva de assentos' });
+  }
+});
+
+
+
 
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);

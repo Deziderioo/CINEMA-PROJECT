@@ -11,9 +11,8 @@ export default function MovieInfo(props){
             <ul className={style.sinopse}><p>{props.sinopse}</p></ul>
             <p>{props.autor}</p>
             <p>{props.elenco}</p>
-            
-             <button><Ticket size={19}  weight="light"/><a href="/moviebooking">Reservar assento</a></button>
-            </div>
+            <button><Ticket size={19}  weight="light"/><a href="/moviebooking">Reservar assento</a></button>
+           </div>
         </Draggable>
     )
 }
