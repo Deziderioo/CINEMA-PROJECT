@@ -7,14 +7,13 @@ import style from "./app.module.css";
 
 export default function App() {
   const [popularMovies, setPopularMovies] = useState([]);
-  
-  const [modal, setModal] = useState();
+  const [modal, setModal] = useState(undefined);
 
   useEffect(() => {
     const fetchPopularMovies = async () => {
       try {
         const movies = await getPopularMovies();
-        setPopularMovies(movies.slice(0, 5 ));
+        setPopularMovies(movies.slice(0, 5));
       } catch (error) {
         console.error('Error fetching popular movies:', error);
       }
@@ -23,32 +22,29 @@ export default function App() {
     fetchPopularMovies();
   }, []);
 
-  
-
   return (
     <>
-    <div className={style.body}>
-      {modal !== undefined && (
-        <MovieInfo 
-          title={popularMovies[modal].title} 
-          image={popularMovies[modal].poster_url}
-          sinopse={popularMovies[modal].overview}
-          onClose={() => setModal(undefined)}
-          onImageClick={() => console.log("Imagem Clicada")}
-        />
-      )}
-      
-      
-      <Header/>
-      <strong className={style.title}>Movies in Theaters</strong>
-      <div className={style.wrapCards}>
-        {popularMovies.map((movie, index) => (
-          <div key={index} onClick={() => setModal(index)}>
-            <Cards title={movie.title} image={movie.poster_url}/>
-          </div>
-        ))}
+      <div className={style.body}>
+        {modal !== undefined && (
+          <MovieInfo 
+            title={popularMovies[modal].title} 
+            image={popularMovies[modal].poster_url}
+            sinopse={popularMovies[modal].overview}
+            onClose={() => setModal(undefined)}
+            onImageClick={() => console.log("Imagem Clicada")}
+          />
+        )}
+        
+        <Header />
+        <strong className={style.title}>Movies in Theaters</strong>
+        <div className={style.wrapCards}>
+          {popularMovies.map((movie, index) => (
+            <div key={index} onClick={() => setModal(index)}>
+              <Cards title={movie.title} image={movie.poster_url} />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
     </>
   )
 }
