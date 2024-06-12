@@ -16,46 +16,54 @@
     padding: 1rem;
     box-sizing: border-box;
     text-align: center;
+  }
   
-
-}
-
-.wrap strong{
-    
+  .wrap strong {
     font-family: "Russo One", sans-serif;
     font-size: 2rem;
     color: var(--green-500);
-}
-
-.wrap img{
+  }
+  
+  .wrap img {
     border-radius: 8px;
     margin: 20px;
     max-width: 8rem;
-}
-
-.wrap p {
+  }
+  
+  .wrap p {
     color: var(--white);
-}
-
-.wrap a{
+  }
+  
+  .linkButton {
+    padding-top: 10px;
     scale: 0.9;
+    background: none;
+    border: none;
     color: var(--green-500);
     transition: all 0.5s;
-}
-
-.wrap a:hover{
+  }
+  
+  .linkButton:hover {
+    cursor: pointer;
     color: var(--green-300);
-}
-
-.button a{
+  }
+  
+  .trailerContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .button a {
     font-size: 0.8rem;
     color: var(--green-500);
     transition: color 0.5s;
     border: none !important;
     background: none !important;
-    
-}
-.button{
+  }
+  
+  .button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,50 +71,55 @@
     height: 2rem;
     border-radius: 8px;
     background: none;
-    border: solid 1px  var(--green-500);
+    border: solid 1px var(--green-500);
     color: var(--green-500);
     text-decoration: none;
     gap: 4px;
     margin-top: 10px;
     transition: all 0.5s;
-}
-
-
-
-
-.button:hover, .button:hover a {
+  }
+  
+  .button:hover,
+  .button:hover a {
     background: var(--green-300);
     color: var(--white);
     border: 1px solid var(--green-300);
-}
-
-.sinopse{
+  }
+  
+  .sinopse {
     overflow-y: auto;
-}
-
-.sinopse::-webkit-scrollbar {
-    width: 0.1px; /* Largura da scrollbar */
-}
-
-
-.closeButton {
+  }
+  
+  .sinopse::-webkit-scrollbar {
+    width: 0.1px;
+  }
+  
+  .closeButton {
     background: none;
     border: none;
     cursor: pointer;
     color: var(--green-500);
     transition: all 0.3s;
-}
+  }
 
-.closeButton:hover{
+  .closeButtonTrailer{
+    padding-left: 48rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: red;
+    transition: all 0.3s;
+  }
+  
+  .closeButton:hover {
     color: var(--green-300);
-}
-
-.wrapCloseButton{
+  }
+  
+  .wrapCloseButton {
     width: 10px;
     height: 10px;
     display: flex;
     align-items: center;
     padding-left: 16rem !important;
-}
-
-
+  }
+  

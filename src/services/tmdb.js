@@ -24,3 +24,17 @@ export const getPopularMovies = async () => {
     throw error;
   }
 };
+
+
+
+export const getMovieVideos = async (movieId) => {
+  try {
+    const response = await tmdb.get(`/movie/${movieId}/videos`);
+    return response.data.results;
+  } catch (error) {
+    console.error('Error fetching movie videos:', error);
+    throw error;
+  }
+};
+
+
