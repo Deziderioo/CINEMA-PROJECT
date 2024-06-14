@@ -45,7 +45,7 @@ export const Contact = () => {
             <br />
             <div className={style.wrapTwoDivs}>
             <div className={style.wrapMap}>
-                    <h2>Map</h2>
+                    <h2 className={style.text}>Map</h2>
                     <MapContainer center={[geoData.lat, geoData.lng]} zoom={16} scrollWheelZoom={false} style={{width: "100%", height: "100% ",  border: "50px"}}>
                         <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -60,7 +60,7 @@ export const Contact = () => {
                     </MapContainer>
                 </div>
                 <div>
-                    <h2>Zap</h2>
+                    <h2 className={style.text}>Zap</h2>
                     <div className={style.inputsDiv}>
                         <div className={style.wrapLabelInput}>
                             <label htmlFor="name" className={style.labels}>Nome:</label>

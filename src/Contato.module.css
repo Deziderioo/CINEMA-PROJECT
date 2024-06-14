@@ -1,5 +1,4 @@
 .wrap-all-contact{
-
     width: 100%;
     height: auto;
     
@@ -8,14 +7,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 3rem;
+    padding-top: 4rem;
     margin-bottom: 3rem;
     font-size: 3.75rem;
     font-family: "Russo One", sans-serif;
     color: var(--green-500);
 }
 
+.text{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
 .wrapH1{
+    padding-top: 0.8rem;
     color: var(--green-500);
     text-align: center;
 }
@@ -31,8 +36,8 @@
 }
 
 .wrapMap{
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 450px;
     padding-bottom: 2rem;
 }
 
@@ -41,7 +46,7 @@
     padding: 2.2em;
     height: auto;
     color: var(--green-500);    
-    border: 2px solid var(--gray-600);
+    border: 2px solid var(--green-500);
     box-shadow: var(--green-500);
     border-radius: 10px;
 }
@@ -89,14 +94,15 @@
     padding: 10px 30px;
     border-radius: 999px;
     background-color: var(--gray-500);
-    border: 1px solid var(--gray-600);
+    border: 1px solid var(--green-500);
     color: var(--gray-500);
     transition: all 200ms ease-out;
 }
 
 .btnTec:hover{
-    border: 1px solid var(--green-500);
-    color: var(--green-500);
+    border: 1px solid var(--green-300);
+    background-color: var(--green-300);
+    color: var(--white);
     box-shadow: var(--green-500);
     transition: all 200ms ease-in;
 }
