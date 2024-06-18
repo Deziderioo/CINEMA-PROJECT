@@ -26,13 +26,14 @@
     background: none;
     border: none;
     cursor: pointer;
+    color: var(--green-500);
 }
 
 .wrap strong{
     
     font-family: "Russo One", sans-serif;
     font-size: 2rem;
-    color: var(--green-500);
+    color: var(--green-300);
 }
 
 .wrap img{

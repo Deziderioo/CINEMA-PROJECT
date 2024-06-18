@@ -1,58 +1,54 @@
-import style from "./TopFilms.module.css"
+import style from "./TopFilms.module.css";
 import { useState, useEffect } from "react";
 import Cards from "./components/cards/cards";
 import MovieInfo from "./components/cards/topcards";
-import { getPopularMovies } from './services/tmdb';
+import { getUpcomingMovies } from './services/tmdb'; // Alterado para getUpcomingMovies
 
 import { Header } from "./components/header/Header";
 
 export default function TopFilms(){
 
-    const [popularMovies, setPopularMovies] = useState([]);
-  
+    const [upcomingMovies, setUpcomingMovies] = useState([]); // Alterado para upcomingMovies
     const [modal, setModal] = useState();
-  
+
     useEffect(() => {
-      const fetchPopularMovies = async () => {
-        try {
-          const movies = await getPopularMovies();
-          setPopularMovies(movies);
-        } catch (error) {
-          console.error('Error fetching popular movies:', error);
-        }
-      };
-  
-      fetchPopularMovies();
+        const fetchUpcomingMovies = async () => {
+            try {
+                const movies = await getUpcomingMovies(); // Alterado para getUpcomingMovies
+                setUpcomingMovies(movies);
+            } catch (error) {
+                console.error('Error fetching upcoming movies:', error);
+            }
+        };
+
+        fetchUpcomingMovies();
     }, []);
-  
+
     return(
         <>
             <Header/>
             <div className={style.wrapTitle}> 
-               <strong>Top Movies</strong>
+                <strong>Upcoming Movies</strong> {/* Alterado para "Upcoming Movies" */}
             </div>
 
             {modal !== undefined && (
-        <MovieInfo 
-          title={popularMovies[modal].title} 
-          image={popularMovies[modal].poster_url}
-          sinopse={popularMovies[modal].overview}
-          onClose={() => setModal(undefined)}
-          onImageClick={() => console.log("Imagem Clicada")}
-        />
-      )}
-      
-      
-    
-      
-      <div className={style.wrapCards}>
-        {popularMovies.map((movie, index) => (
-          <div key={index} onClick={() => setModal(index)}>
-            <Cards title={movie.title} image={movie.poster_url}/>
-          </div>
-        ))}
-      </div>
-           
+                <MovieInfo 
+                    idMovie={upcomingMovies[modal].id} // Passa o id do filme para o MovieInfo
+                    title={upcomingMovies[modal].title} 
+                    image={upcomingMovies[modal].poster_url}
+                    sinopse={upcomingMovies[modal].overview}
+                    onClose={() => setModal(undefined)}
+                    onImageClick={() => console.log("Imagem Clicada")}
+                />
+            )}
+
+            <div className={style.wrapCards}>
+                {upcomingMovies.map((movie, index) => (
+                    <div key={index} onClick={() => setModal(index)}>
+                        <Cards title={movie.title} image={movie.poster_url}/>
+                    </div>
+                ))}
+            </div>
         </>
-        )
+    );
 }

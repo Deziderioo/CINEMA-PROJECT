@@ -15,7 +15,7 @@ export default function App() {
     const fetchPopularMovies = async () => {
       try {
         const movies = await getPopularMovies();
-        setPopularMovies(movies.slice(0, 5));
+        setPopularMovies(movies.slice(5, 10));
       } catch (error) {
         console.error('Error fetching popular movies:', error);
       }

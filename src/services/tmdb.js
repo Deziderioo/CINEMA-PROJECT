@@ -25,7 +25,24 @@ export const getPopularMovies = async () => {
   }
 };
 
+export const getUpcomingMovies = async () => {
+  try {
+    const response = await tmdb.get('/movie/upcoming', {
+      params: {
+        language: 'en-US',
+        page: 1,
+      },
+    });
 
+    return response.data.results.map(movie => ({
+      ...movie,
+      poster_url: movie.poster_path ? `${IMAGE_BASE_URL}${movie.poster_path}` : null
+    }));
+  } catch (error) {
+    console.error('Error fetching upcoming movies:', error);
+    throw error;
+  }
+};
 
 export const getMovieVideos = async (movieId) => {
   try {
@@ -36,5 +53,3 @@ export const getMovieVideos = async (movieId) => {
     throw error;
   }
 };
-
-
