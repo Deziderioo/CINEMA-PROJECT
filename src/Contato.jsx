@@ -41,7 +41,7 @@ export const Contact = () => {
     return(
         <div className={style['wrap-all-contact']}>
             <Header/>
-            <h1 className={style.wrapH1}>Contato</h1>
+            <strong className={style.title}>Contato</strong>
             <br />
             <div className={style.wrapTwoDivs}>
             <div className={style.wrapMap}>

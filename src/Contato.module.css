@@ -7,12 +7,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 4rem;
+    padding-top: 2rem;
     margin-bottom: 3rem;
-    font-size: 3.75rem;
+    font-size: 3rem;
     font-family: "Russo One", sans-serif;
     color: var(--green-500);
 }
+.title::before, .title::after{
+    content: '';
+    flex: 0.23;
+    border-bottom: 2px solid var(--green-500); 
+    margin: 0 10px; 
+}
+
 
 .text{
     text-align: center;

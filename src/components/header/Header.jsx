@@ -13,8 +13,8 @@ export function Header() {
             </div>
             <div className={styles.wrapA}>
               <a href="/home">Home</a>
-              <a href="/contact">contact</a>              
-              <a href="/topfilms">top</a>
+              <a href="/contact">Contact</a>              
+              <a href="/topfilms">Up Coming</a>
             </div>
             <div className={styles.icon}>
               <button><a href=""><Ticket size={25}  weight="light"/></a></button>

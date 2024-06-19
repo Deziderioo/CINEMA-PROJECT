@@ -9,7 +9,7 @@
     
 }
 
-.wrapTitle{
+.Title{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,6 +19,13 @@
     font-family: "Russo One", sans-serif;
     color: var(--green-500);
   }
+  .Title::before, .Title::after{
+    content: '';
+    flex: 0.23;
+    border-bottom: 2px solid var(--green-500); 
+    margin: 0 10px; 
+}
+
 
   ::-webkit-scrollbar {
     width: 10px;

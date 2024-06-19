@@ -27,7 +27,7 @@ export default function TopFilms(){
     return(
         <>
             <Header/>
-            <div className={style.wrapTitle}> 
+            <div className={style.Title}> 
                 <strong>Upcoming Movies</strong> {/* Alterado para "Upcoming Movies" */}
             </div>
 
