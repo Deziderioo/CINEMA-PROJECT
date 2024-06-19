@@ -22,6 +22,7 @@ export function Login() {
     .then(data => {
       if (data.message) {
         alert(data.message);
+        navigate('/user'); // Redireciona para a tela de usuário após login bem-sucedido
       } else {
         alert(data.error);
       }

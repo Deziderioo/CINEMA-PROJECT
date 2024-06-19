@@ -84,6 +84,28 @@ app.post('/api/toreserve', async (req, res) => {
 });
 
 
+// Rota para alterar a senha
+app.post('/api/change-password', (req, res) => {
+  const { email, newPassword } = req.body;
+  db.run('UPDATE users SET password = ? WHERE email = ?', [newPassword, email], function(err) {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+    res.status(200).json({ message: 'Senha alterada com sucesso!' });
+  });
+});
+
+// Rota para deletar o usuário
+app.post('/api/delete-user', (req, res) => {
+  const { email } = req.body;
+  db.run('DELETE FROM users WHERE email = ?', [email], function(err) {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+    res.status(200).json({ message: 'Usuário deletado com sucesso!' });
+  });
+});
+
 
 
 app.listen(port, () => {

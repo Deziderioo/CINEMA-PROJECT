@@ -12,6 +12,7 @@ import { Login } from './Login.jsx'
 import './globalStyle.css'
 import TopFilms from './TopFilms.jsx';
 import { Contact } from './Contato.jsx';
+import { User } from './User.jsx';
 import MovieBooking from './MovieBooking.jsx';
 import Credits from './Credits.jsx';
 
@@ -47,7 +48,11 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login/>,
-  },  
+  }, 
+  {
+    path: "/User",
+    element: <User/>,
+  }, 
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
