@@ -37,6 +37,7 @@ export default function TopFilms(){
                     title={upcomingMovies[modal].title} 
                     image={upcomingMovies[modal].poster_url}
                     sinopse={upcomingMovies[modal].overview}
+                    releaseDate={upcomingMovies[modal].release_date}
                     onClose={() => setModal(undefined)}
                     onImageClick={() => console.log("Imagem Clicada")}
                 />

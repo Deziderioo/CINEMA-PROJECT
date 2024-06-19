@@ -13,6 +13,7 @@ import './globalStyle.css'
 import TopFilms from './TopFilms.jsx';
 import { Contact } from './Contato.jsx';
 import MovieBooking from './MovieBooking.jsx';
+import Credits from './Credits.jsx';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
   {
     path: "/movieBooking",
     element: <MovieBooking/>,
+  },
+  {
+    path: "/credits",
+    element: <Credits/>,
   },  
   {
     path: "/login",

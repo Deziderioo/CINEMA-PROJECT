@@ -64,3 +64,13 @@
 .sinopse::-webkit-scrollbar {
     width: 0.1px; /* Largura da scrollbar */
 }
+
+.releaseDateStyle{
+    color: var(--green-500) !important;
+}
+
+.creditsButton{
+    scale: 1.2;
+    background: none;
+    border: none;
+}

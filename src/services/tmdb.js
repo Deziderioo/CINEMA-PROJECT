@@ -53,3 +53,17 @@ export const getMovieVideos = async (movieId) => {
     throw error;
   }
 };
+
+export const getMovieCredits = async (movieId) => {
+  try {
+    const response = await tmdb.get(`/movie/${movieId}/credits`, {
+      params: {
+        language: 'en-US',
+      },
+    });
+    return response.data.cast;
+  } catch (error) {
+    console.error('Error fetching movie credits:', error);
+    throw error;
+  }
+};

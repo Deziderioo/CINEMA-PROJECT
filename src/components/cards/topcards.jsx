@@ -12,8 +12,12 @@ export default function MovieInfo(props) {
                 <strong>{props.title}</strong>
                 <img src={props.image} alt="" onClick={props.onImageClick} />
                 <ul className={style.sinopse}><p>{props.sinopse}</p></ul>
-                <p>{props.autor}</p>
-                <p>{props.elenco}</p>
+                <div>
+                    <p className={style.releaseDateStyle}>Release Date</p>
+                    <p>{props.releaseDate}</p>
+                </div>
+                <button className={style.creditsButton}><a href="/credits">credits</a></button>
+                
             </div>
         </Draggable>
     );
