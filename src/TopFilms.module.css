@@ -38,5 +38,21 @@
     border-radius: 10px;
   }
 
+
+  @media (max-width: 768px) {
+    .Title{
+      display: flex;
+     
+      
+      text-align: center;
+      padding-top: 2rem;
+      margin-bottom: 3rem;
+      font-size: 3rem;
+      font-family: "Russo One", sans-serif;
+      color: var(--green-500);
+      z-index: 1;
+    }
+  }
+
  
   

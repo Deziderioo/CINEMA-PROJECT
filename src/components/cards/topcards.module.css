@@ -75,6 +75,7 @@
     border: none;
 }
 
+
 @media (max-width: 768px) {
 
     .wrap {
@@ -84,8 +85,8 @@
         height: 80%;
         max-height: 80%;
         position: fixed;
-        top:20%;
-        left:10%;
+        top:10%;
+        left: 15%;
         transform: translate(-50%, -50%);
         z-index: 999;
         display: flex;
@@ -98,6 +99,12 @@
     }
 
     .closeButton{
+        scale: 1.2;
         z-index: 999;
     }
+
+    .releaseDateStyle{
+        padding-top: 10px;
+    }
+
 }
