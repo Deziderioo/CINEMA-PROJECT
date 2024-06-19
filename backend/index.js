@@ -86,12 +86,24 @@ app.post('/api/toreserve', async (req, res) => {
 
 // Rota para alterar a senha
 app.post('/api/change-password', (req, res) => {
-  const { email, newPassword } = req.body;
-  db.run('UPDATE users SET password = ? WHERE email = ?', [newPassword, email], function(err) {
+  const { email, oldPassword, newPassword } = req.body;
+  
+  // Verificar se a senha antiga está correta
+  db.get('SELECT * FROM users WHERE email = ? AND password = ?', [email, oldPassword], (err, row) => {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
-    res.status(200).json({ message: 'Senha alterada com sucesso!' });
+    if (!row) {
+      return res.status(400).json({ error: 'Senha antiga incorreta!' });
+    }
+    
+    // Atualizar a senha
+    db.run('UPDATE users SET password = ? WHERE email = ?', [newPassword, email], function(err) {
+      if (err) {
+        return res.status(500).json({ error: err.message });
+      }
+      res.status(200).json({ message: 'Senha alterada com sucesso!' });
+    });
   });
 });
 

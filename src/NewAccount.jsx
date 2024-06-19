@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import style from "./NewAccount.module.css";
 import { Header } from "./components/header/Header";
 
@@ -6,6 +7,7 @@ export function NewAccount() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,6 +24,7 @@ export function NewAccount() {
 
     if (response.ok) {
       alert('Conta criada com sucesso!');
+      navigate('/user'); // Redireciona para a tela de usuário após criar a conta
     } else {
       alert(data.error);
     }
@@ -32,7 +35,7 @@ export function NewAccount() {
       <Header />
 
       <div className={style.wrapTitle}>
-        <strong>new account</strong>
+        <strong>New Account</strong>
       </div>
       <form className={style.card} onSubmit={handleSubmit}>
         <div className={style.wrapInp}>
