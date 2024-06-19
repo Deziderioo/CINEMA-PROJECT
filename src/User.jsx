@@ -5,18 +5,25 @@ import { Header } from "./components/header/Header";
 
 export function User() {
   const [email, setEmail] = useState('');
+  const [oldPassword, setOldPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
+  const [confirmNewPassword, setConfirmNewPassword] = useState('');
   const navigate = useNavigate();
 
   const handleChangePassword = (e) => {
     e.preventDefault();
+
+    if (newPassword !== confirmNewPassword) {
+      alert('A nova senha e a confirmação da nova senha não coincidem.');
+      return;
+    }
 
     fetch('http://localhost:3001/api/change-password', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ email, newPassword })
+      body: JSON.stringify({ email, oldPassword, newPassword })
     })
     .then(response => response.json())
     .then(data => {
@@ -74,11 +81,27 @@ export function User() {
           />
         </div>
         <div className={style.wrapInpPass}>
+          <label htmlFor="oldPassword">Old Password</label>
+          <input
+            type="password"
+            value={oldPassword}
+            onChange={(e) => setOldPassword(e.target.value)}
+          />
+        </div>
+        <div className={style.wrapInpPass}>
           <label htmlFor="newPassword">New Password</label>
           <input
             type="password"
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
+          />
+        </div>
+        <div className={style.wrapInpPass}>
+          <label htmlFor="confirmNewPassword">Confirm New Password</label>
+          <input
+            type="password"
+            value={confirmNewPassword}
+            onChange={(e) => setConfirmNewPassword(e.target.value)}
           />
         </div>
         <div className={style.buttonlogin}>
