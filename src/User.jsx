@@ -73,31 +73,31 @@ export function User() {
       </div>
       <form className={style.card} onSubmit={handleChangePassword}>
         <div className={style.wrapInp}>
-          <label htmlFor="email">E-mail</label>
+          <h3 htmlFor="email">E-mail</h3>
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <div className={style.wrapInpPass}>
-          <label htmlFor="oldPassword">Old Password</label>
+        <div className={style.wrapInp}>
+          <h3 htmlFor="oldPassword">Old Password</h3>
           <input
             type="password"
             value={oldPassword}
             onChange={(e) => setOldPassword(e.target.value)}
           />
         </div>
-        <div className={style.wrapInpPass}>
-          <label htmlFor="newPassword">New Password</label>
+        <div className={style.wrapInp}>
+          <h3 htmlFor="newPassword">New Password</h3>
           <input
             type="password"
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
           />
         </div>
-        <div className={style.wrapInpPass}>
-          <label htmlFor="confirmNewPassword">Confirm New Password</label>
+        <div className={style.wrapInp}>
+          <h3 htmlFor="confirmNewPassword">Confirm New Password</h3>
           <input
             type="password"
             value={confirmNewPassword}

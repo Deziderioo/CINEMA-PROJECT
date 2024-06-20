@@ -1,38 +1,117 @@
 .wrapTitle {
-    text-align: center;
-    margin: 20px 0;
-  }
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 20px 0;
+  color: var(--green-500);
+}
+
+.card {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid var(--green-500);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--background-color);
+}
+
+h3 {
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.wrapInp {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+
+
+.wrapInp input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: var(--gray-700);
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-weight: bold;
+  color: black;
+}
+
+.buttonlogin {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapInpPass {
+  margin-bottom: 15px;
+}
+
+.wrapInpPass label {
+  color: var(--white);
+  margin-bottom: 5px;
+}
+
+.wrapInpPass input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
   
-  .card {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+  transition: border-color 0.3s ease;
+}
+
+.wrapInp input:focus {
+  scale: 1.01;
+  border: 1px solid var(--green-500);
   
-  .wrapInp {
-    margin-bottom: 15px;
-  }
-  
-  .wrapInpPass {
-    margin-bottom: 15px;
-  }
-  
-  .buttonlogin {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .deleteButton {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: red;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
+  outline: none; 
+}
+
+
+.buttonlogin {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.buttonlogin button {
+  padding: 10px 20px;
+  background: none;
+  color: var(--green-500);
+  border: 1px solid var(--green-500);
+  border-radius: 8px;
+  cursor: pointer;
+
+  transition: all 0.5s;
+}
+
+.buttonlogin button:hover{
+  background-color: var(--green-300);
+  color: var(--white);
+  scale: 1.1;
+}
+
+.deleteButton {
+  scale: 0.9;
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background: none;
+  color: var(--green-500);
+  border: 1px solid var(--green-500);
+  border-radius: 8px;
+  cursor: pointer;
+
+  transition: all 0.5s ;
+}
+
+.deleteButton:hover{
+  scale: 1.1;
+  color: var(--white);
+  background: red;
+  border-color: red;
+}
+
