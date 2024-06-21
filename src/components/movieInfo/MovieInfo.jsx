@@ -8,6 +8,18 @@ import Draggable from 'react-draggable';
 export default function MovieInfo(props) {
   const [isTrailerOpen, setIsTrailerOpen] = useState(false);
   const [trailerKey, setTrailerKey] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+        setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // check initial size
+
+    return () => window.removeEventListener('resize', handleResize);
+}, []);
 
   const handleTrailerOpen = async () => {
     setIsTrailerOpen(true);
@@ -37,7 +49,7 @@ export default function MovieInfo(props) {
   }, [isTrailerOpen]);
 
   return (
-    <Draggable>
+    <Draggable disabled={isMobile}>
       <div className={style.wrap}>
         <div className={style.wrapCloseButton}>
           <button onClick={props.onClose} className={style.closeButton}>

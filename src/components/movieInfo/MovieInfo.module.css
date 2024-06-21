@@ -122,4 +122,13 @@
     align-items: center;
     padding-left: 16rem !important;
   }
+
+  @media(max-width: 768px){
+    .wrap{
+      top:15%;
+      left: 8%;
+      transform: translate(-50%, -50%);
+      position: fixed;
+    }
+  }
   

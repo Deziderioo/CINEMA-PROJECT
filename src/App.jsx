@@ -24,6 +24,8 @@ export default function App() {
     fetchPopularMovies();
   }, []);
 
+  
+
   const handleModalOpen = async (index) => {
     setModal(index);
     try {

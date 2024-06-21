@@ -43,6 +43,7 @@ h3 {
 .buttonlogin {
   display: flex;
   justify-content: center;
+ 
 }
 
 .wrapInpPass {
@@ -74,7 +75,7 @@ h3 {
 .buttonlogin {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  
 }
 
 .buttonlogin button {
@@ -84,7 +85,7 @@ h3 {
   border: 1px solid var(--green-500);
   border-radius: 8px;
   cursor: pointer;
-
+  flex-direction: column;
   transition: all 0.5s;
 }
 
@@ -95,7 +96,7 @@ h3 {
 }
 
 .deleteButton {
-  scale: 0.9;
+  scale: 0.9g;
   display: block;
   margin: 20px auto;
   padding: 10px 20px;
