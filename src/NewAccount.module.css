@@ -18,7 +18,7 @@
   margin: auto;
   background: var(--gray-800);
   width: 19rem ;
-  height: 20rem;
+  height: 21rem;
   border-radius: 8px;
 }
 
@@ -66,18 +66,23 @@ input{
   padding-right: 11.8rem;
 }
 
-.buttonclogin button{
+.buttonCad button{
   align-items: center;
   padding: 10px 20px;
-  background-color: var(--green-500);
-  color: white;
-  border: none;
+  background: none;
+  color: var(--green-500);
+  border: 1px solid var(--green-500);
   cursor: pointer;
   margin-top: 1rem;
-  border-radius: 5px;
-  gap: 5px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  
+  transition: all 0.2s;
+  
 }
 
-button:hover {
-  background-color: var(--green-700);
+.buttonCad button:hover{
+  cursor: pointer;
+  background: var(--green-300);
+  color: var(--white);
 }

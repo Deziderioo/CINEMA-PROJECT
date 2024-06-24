@@ -65,8 +65,8 @@ export function Login() {
         </div>
         <div className={style.buttonlogin}>
           <button type="submit">Login</button>
-          <button type="button" onClick={handleCreateAccount}>Create Account</button>
         </div>
+          <button className={style.buttonCreate} type="button" onClick={handleCreateAccount}>Create Account</button>
       </form>
     </div>
   );

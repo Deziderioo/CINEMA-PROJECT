@@ -19,6 +19,7 @@
     width: 19rem;
     height: 20rem;
     border-radius: 8px;
+    max-height: 20rem;
   }
   
   .card input {
@@ -36,14 +37,9 @@
     padding-top: 1rem;
   }
   
-  input:focus {
-    border-color: var(--green-300);
-  }
+
   
-  input {
-    padding-left: 8px;
-    color: var(--white);
-  }
+ 
   
   .wrapInp input::placeholder, .wrapInpPass input::placeholder {
     font-size: 0.9rem;
@@ -61,21 +57,44 @@
     padding-right: 11.8rem;
   }
   
+  .buttonlogin {
+    display: flex;
+    gap: 10px;
+  }
  .buttonlogin button{
-    align-items: center;
-    padding: 10px 20px;
-    background-color: var(--green-500);
-    color: white;
-    border: none;
+    width: 150px;
+    padding: 10px;
+    background: none;
+    color: var(--green-500);
+    border: 1px solid var(--green-500);
     cursor: pointer;
     margin-top: 1rem;
     border-radius: 5px;
-    gap: 5px;
+    
+    transition: all 0.2s;
   }
   
-  button:hover {
-    background-color: var(--green-700);
+  .buttonlogin button:hover{
+    cursor: pointer;
+    background: var(--green-300);
+    color: var(--white);
   }
+
+  .buttonCreate{
+    background: none;
+    border: none;
+    margin-top: 30px;
+    color: var(--green-500);
+
+    transition: all 0.2s;
+  }
+
+  .buttonCreate:hover{
+    cursor: pointer;
+    color: var(--green-300);
+  }
+  
+  
   
   .redirectButton {
     background: none;
