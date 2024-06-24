@@ -42,7 +42,7 @@ const router = createBrowserRouter([
     element: <MovieBooking/>,
   },
   {
-    path: "/credits",
+    path: "/credits/:movieId",
     element: <Credits/>,
   },  
   {

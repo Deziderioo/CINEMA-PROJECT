@@ -73,6 +73,15 @@
     scale: 1.2;
     background: none;
     border: none;
+    color: var(--green-500);
+
+    transition: all 0.1s;
+}
+
+.creditsButton:hover{
+    cursor: pointer;
+    color: var(--green-300);
+    scale: 1.3;
 }
 
 

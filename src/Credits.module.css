@@ -1,0 +1,58 @@
+.creditsContainer {
+  padding: 20px;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: var(--gray-700);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 200px;
+  text-align: center;
+}
+
+.title{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 3.75rem;
+    font-family: "Russo One", sans-serif;
+    color: var(--green-500);
+}
+
+.title::before, .title::after{
+  content: '';
+  flex: 0.23;
+  border-bottom: 2px solid var(--green-500); 
+  margin: 0 10px; 
+}
+
+.profileImage {
+  width: 100%;
+  height: auto;
+}
+
+.cardContent {
+  padding: 10px;
+}
+
+.cardContent h2 {
+  font-size: 1.2em;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.cardContent p {
+  font-size: 0.9em;
+  color: #555;
+}
