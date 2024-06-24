@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import style from "./Credits.module.css";
 import { Header } from "./components/header/Header";
 import { getMovieCredits } from './services/tmdb';
+import { ImageBroken  } from "@phosphor-icons/react";
 
 const Credits = () => {
     const { movieId } = useParams();
@@ -32,7 +33,7 @@ const Credits = () => {
                             {credit.profile_path ? (
                                 <img src={`https://image.tmdb.org/t/p/w200${credit.profile_path}`} alt={credit.name} className={style.profileImage} />
                             ) : (
-                                <div className={style.noImage}>No Image</div>
+                                <div className={style.noImage}><ImageBroken size={100} /></div>
                             )}
                             <div className={style.cardContent}>
                                 <h2>{credit.name}</h2>
